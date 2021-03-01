@@ -2,9 +2,6 @@ param(
     [Parameter(Mandatory = $True)][string] $csvFile,
     [Parameter(Mandatory = $True)][string[]] $teamMembers
 )
-#$csvFile = "D:\hmi\doc\internal report\test.csv"
-#$teamMembers = "Newton Zou", "Steven Zhou", "Tom Weng"
-
 
 $membersCalc = @{ }
 foreach ($m in $teamMembers) {
