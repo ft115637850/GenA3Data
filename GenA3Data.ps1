@@ -4,14 +4,8 @@ param(
 )
 
 $membersCalc = @{ }
-foreach ($m in $teamMembers) {
-    $membersCalc.Add($m , [double]0)
-}
-
 $calcHours = @{ }
-foreach ($m in $calcHours) {
-    $calcHours.Add($m , [double]0)
-}
+
 
 $TableData = Import-Csv -Path $csvFile
 $lastStoryPoints = [double]0
