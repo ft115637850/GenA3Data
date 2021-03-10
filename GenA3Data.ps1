@@ -14,7 +14,7 @@ foreach ($DataValue in $TableData) {
     if (-not [string]::IsNullOrEmpty($DataValue.'Story Points')) {
         #if ($DataValue.'Work Item Type' -eq 'User Story' -or  $DataValue.'Work Item Type' -eq 'Bug')
         ##Calculate last one
-        if ($lastStoryPoints -ne 0) {
+        if ($lastStoryPoints -ne 0 -and $lastStoryTotalHours -ne 0) {
             $teamMembers | ForEach-Object { $membersCalc[$_] += $lastStoryPoints * $calcHours[$_] / $lastStoryTotalHours }
         }
         ##Initialize for new
